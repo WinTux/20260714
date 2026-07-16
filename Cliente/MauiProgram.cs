@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Cliente.ConexionApi;
+using Microsoft.Extensions.Logging;
 
 namespace Cliente
 {
@@ -14,9 +15,10 @@ namespace Cliente
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
-
+            builder.Services.AddSingleton<IRestConexionApi, RestConexionApi>();
+            builder.Services.AddSingleton<MainPage>();
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
