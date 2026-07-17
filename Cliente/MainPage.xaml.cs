@@ -1,5 +1,6 @@
 ﻿using Cliente.ConexionApi;
 using Cliente.Models;
+using Cliente.Pages;
 using System.Diagnostics;
 
 namespace Cliente
@@ -25,9 +26,19 @@ namespace Cliente
         }
         async void OnAddPlatoClic(object sender, EventArgs e) { 
             Debug.WriteLine("Botón de agregar plato presionado");
+            var param = new Dictionary<string, object>
+            {
+                { nameof(Plato), new Plato() }
+            };
+            await Shell.Current.GoToAsync(nameof(GestionPlatosPage), param);
         }
         async void OnPlatoCambiado(object sender, SelectionChangedEventArgs e) {
             Debug.WriteLine("Botón de plato cambiado presionado");
+            var param = new Dictionary<string, object>
+            {
+                { nameof(Plato), e.CurrentSelection.FirstOrDefault() as Plato }
+            };
+            await Shell.Current.GoToAsync(nameof(GestionPlatosPage), param);
         }
     }
 }
