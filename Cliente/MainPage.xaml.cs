@@ -16,12 +16,12 @@ namespace Cliente
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            //coleccionPlatosView.ItemsSource = await conexionApi.ObtenerPlatosAsync();
-            coleccionPlatosView.ItemsSource = new List<Plato>() { 
+            coleccionPlatosView.ItemsSource = await conexionApi.ObtenerPlatosAsync();
+            /*coleccionPlatosView.ItemsSource = new List<Plato>() { 
                 new Plato(){Id=1,Nombre="Plato 1"},
                 new Plato(){Id=2,Nombre="Plato 2"},
                 new Plato(){Id=3,Nombre="Plato 3"}
-            };
+            };*/
         }
         async void OnAddPlatoClic(object sender, EventArgs e) { 
             Debug.WriteLine("Botón de agregar plato presionado");

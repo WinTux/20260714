@@ -17,7 +17,7 @@ namespace Cliente.ConexionApi
         {
             httpClient = new HttpClient();
             //dominio = DeviceInfo.Platform == DevicePlatform.Android ? "https://10.0.2.2:7025" : "https://192.168.1.212:7025";
-            dominio = DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.1.212:7025" : "https://192.168.1.212:7025";
+            dominio = DeviceInfo.Platform == DevicePlatform.Android ? "http://192.168.1.207:5163" : "http://localhost:5163";
             url = $"{dominio}/api/v1";
             jsonSerializerOptions = new JsonSerializerOptions
             {
