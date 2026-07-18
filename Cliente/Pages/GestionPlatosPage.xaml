@@ -16,8 +16,8 @@
                 </TableSection>
             </TableRoot>
         </TableView>
-        <Button Grid.Row="1" Grid.Column="0" Text="Guardar" Clicked="OnGuardarClic"/>
-        <Button Grid.Row="1" Grid.Column="1" Text="Cancelar" Clicked="OnCancelarClic"/>
-        <Button Grid.Row="1" Grid.Column="2" Text="Eliminar" Clicked="OnEliminarClic"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="Guardar" Clicked="OnGuardarClic" Margin="20,5"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="Cancelar" Clicked="OnCancelarClic" Margin="0,5"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="Eliminar" Clicked="OnEliminarClic" Margin="20,5"/>
     </Grid>
 </ContentPage>
